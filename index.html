@@ -337,7 +337,7 @@
       <h3 class="sub-title mt-lg"><i class="fa-solid fa-play-circle"></i> <span data-i18n="guide.videoTitle">Tutorial:
           Vídeos & YouTube</span></h3>
       <p class="section-desc small" data-i18n="guide.videoDesc">Aplica-se a Desenhos, Animes, Filmes e YouTube. O
-        processo é o mesmo: obter o código <code>iframe</code> e inseri-lo no painel.</p>
+        processo é o mesmo: obter o código <code>iframe</code> e inseri-lo no painel. Os embeds e players utilizados neste guia são baseados no RedeCanais como referência de uso e crédito aos seus serviços.</p>
 
       <div class="steps-list">
         <div class="step">
@@ -400,6 +400,48 @@
         </div>
       </div>
 
+      <h3 class="sub-title mt-lg"><i class="fa-solid fa-magnifying-glass"></i> <span data-i18n="guide.verify.title">Verificação do código da obra</span></h3>
+      <p class="section-desc small" data-i18n="guide.verify.desc">Antes de publicar, confirme se o código da obra corresponde ao item correto. Filmes geralmente usam nome do título; animes, desenhos e séries exigem temporada e número do episódio.</p>
+      <ul class="check-list">
+        <li><i class="fa-solid fa-check"></i> <span data-i18n="guide.verify.movie">Filmes: confirme o nome do filme e o item exato da obra.</span></li>
+        <li><i class="fa-solid fa-check"></i> <span data-i18n="guide.verify.series">Animes, desenhos e séries: valide a temporada, o episódio e a correspondência com o conteúdo publicado.</span></li>
+        <li><i class="fa-solid fa-check"></i> <span data-i18n="guide.verify.server">No iframe, confira o trecho <code>server=RCServerXX</code> e o número do servidor para evitar inserir o item errado.</span></li>
+      </ul>
+
+      <div class="option-card" style="margin-top: 1.2rem;">
+        <div class="option-header">
+          <span class="option-letter">RC</span>
+          <h4>Exemplo real do RCServer e da verificação da obra</h4>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.75rem; padding: 0.45rem 0.6rem; border: 1px solid var(--border); border-radius: 12px; background: rgba(14, 165, 233, 0.05);">
+          <img src="./assets/redecanais.jpg" alt="Logo RedeCanais" style="width: 34px; height: 34px; border-radius: 8px; object-fit: cover;" />
+          <span style="font-size: 0.8rem; color: var(--text-dim);">Crédito ao RedeCanais — referência de uso dos embeds e players utilizados no guia.</span>
+        </div>
+        <div class="code-block">
+          <button class="copy-btn" onclick="copyCode(this)" title="Copiar exemplo"><i class="fa-solid fa-copy"></i></button>
+          <pre><code>&lt;iframe
+  name="Player"
+  src="https://redecanais.ph/player3/server.php?server=RCServer05&amp;subfolder=ondemand&amp;vid=BEN10EP01"
+  frameborder="0"
+  height="450"
+  scrolling="no"
+  width="100%"
+  allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+  allowfullscreen&gt;
+&lt;/iframe&gt;</code></pre>
+        </div>
+        <ol class="option-steps">
+          <li>O trecho <strong>server=RCServer05</strong> indica o servidor do player; o número precisa coincidir com o item correto.</li>
+          <li>O trecho <strong>vid=BEN10EP01</strong> mostra o código da obra e do episódio; neste caso, o identificador indica que é o episódio 01 de Ben 10.</li>
+          <li>Se for filme, normalmente basta validar o nome do filme e confirmar que o item cadastrado é o mesmo.</li>
+          <li>Se for anime, desenho ou série, verifique a temporada, o número do episódio e a obra exata antes de salvar.</li>
+          <li>Compare sempre: nome da obra, temporada, episódio, servidor e item publicado no painel.</li>
+        </ol>
+        <div class="option-warn">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <span>Exemplo prático: <code>server=RCServer05</code> + <code>vid=BEN10EP01</code> indica um episódio específico. Confirme se o cadastro é do episódio 01 da temporada correta antes de publicar. Isso é um exemplo baseado no padrão do RedeCanais.</span>
+        </div>
+      </div>
 
       <h3 class="sub-title mt-lg"><i class="fa-solid fa-images"></i> <span data-i18n="guide.demoVideo">Demonstração —
           Vídeos</span></h3>
@@ -570,12 +612,25 @@
           <ul class="bp-list warn-list">
             <li data-i18n="guide.err1">Cadastrar episódio incorreto</li>
             <li data-i18n="guide.err2">Colar iframe incompleto</li>
-            <li data-i18n="guide.err3">Esquecer de ajustar <code>width</code> e <code>height</code></li>
+            <li data-i18n="guide.err3">Esquecer de verificar o <code>RCServer[numero-do-servidor]</code> e o código da obra</li>
             <li data-i18n="guide.err4">Publicar links quebrados</li>
             <li data-i18n="guide.err5">Inserir mangá ou HQ com permissão privada no Drive</li>
             <li data-i18n="guide.err6">Criar entradas duplicadas por falta de conferência</li>
           </ul>
         </div>
+      </div>
+
+      <div class="bp-card" style="margin-top: 2rem; border-color: rgba(14, 165, 233, 0.35);">
+        <h3 class="sub-title"><i class="fa-solid fa-circle-info"></i> <span>Aviso final sobre embeds e links de incorporação</span></h3>
+        <p class="section-desc small" style="margin-top: 0.8rem;">
+          Este guia apresenta exemplos de uso técnico para fins de referência. Os embeds e players mostrados aqui existem apenas para demonstrar como a incorporação funciona em um painel de cadastro. Não se trata de representação oficial de qualquer serviço externo nem de aprovação por parte do provedor original.
+        </p>
+        <ul class="bp-list">
+          <li>Use apenas links, embeds ou players que você tenha autorização para incorporar ou que sejam claramente permitidos pelo provedor original.</li>
+          <li>Respeite os termos de uso, a origem do conteúdo e a legislação aplicável ao material que será publicado.</li>
+          <li>Se preferir, você pode utilizar outro método de embed ou outro link de incorporação legítimo, desde que mantenha a transparência sobre a fonte e a compatibilidade com o painel.</li>
+          <li>Não utilize o código de terceiros como se fosse um serviço próprio, nem se passe por uma plataforma ou marca que não seja a sua.</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -589,7 +644,12 @@
 
   <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
     <button class="lightbox-close" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
-    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+    <div class="lightbox-stage">
+      <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Imagem anterior" type="button"><i class="fa-solid fa-chevron-left"></i></button>
+      <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+      <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Próxima imagem" type="button"><i class="fa-solid fa-chevron-right"></i></button>
+      <button class="lightbox-zoom" id="lightbox-zoom" aria-label="Ampliar imagem" type="button"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+    </div>
     <p class="lightbox-caption" id="lightbox-caption"></p>
   </div>
 

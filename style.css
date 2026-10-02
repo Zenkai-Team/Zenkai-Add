@@ -809,7 +809,7 @@ body {
 
 .screenshots-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
 }
 
@@ -1166,12 +1166,21 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .lightbox-overlay.active {
   opacity: 1;
   pointer-events: all;
+}
+
+.lightbox-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(90vw, 1200px);
+  min-height: 200px;
 }
 
 .lightbox-img {
@@ -1181,7 +1190,59 @@ body {
   border: 1px solid var(--border);
   object-fit: contain;
   box-shadow: 0 0 60px rgba(0,0,0,0.6);
+  transition: transform 0.25s ease;
   animation: lbIn 0.2s ease;
+}
+
+.lightbox-img.zoomed {
+  transform: scale(1.7);
+  max-width: 72vw;
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.35);
+  color: var(--text);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  z-index: 2;
+  transition: var(--transition);
+}
+
+.lightbox-nav:hover {
+  background: rgba(255,255,255,0.12);
+  color: var(--primary);
+}
+
+.lightbox-prev {
+  left: 1rem;
+}
+
+.lightbox-next {
+  right: 1rem;
+}
+
+.lightbox-zoom {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.35);
+  color: var(--text);
+  cursor: pointer;
+  z-index: 2;
 }
 
 @keyframes lbIn {
