@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-BR" id="html-root">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n-title="page.title">O que é o Zenkai? — Guia do Portal</title>
+  <meta name="description" content="Conheça o Zenkai: componentes e como cadastrar conteúdo no portal." />
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Poppins:wght@400;500;600;700&family=Audiowide&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#hero">
+        <img src="./assets/icon.png" alt="Logo Zenkai" class="nav-logo-img" />
+        <span>Zenkai</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#visao-geral" data-i18n="nav.overview">Visão Geral</a></li>
+        <li><a href="#paginas" data-i18n="nav.pages">Páginas</a></li>
+        <li><a href="#xp-ranks" data-i18n="nav.xp">XP & Ranks</a></li>
+        <li><a href="#como-cadastrar" data-i18n="nav.guide">Como Cadastrar</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-btn" id="lang-btn" title="Switch language" aria-label="Switch language">
+          <i class="fa-solid fa-globe"></i>
+          <span id="lang-label">EN</span>
+        </button>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="hero" id="hero">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="hero-content">
+      <img src="./assets/icon.png" alt="Logo Zenkai" class="hero-logo" />
+      <h1 class="hero-title" data-i18n="hero.title">O que é o <span class="highlight">Zenkai</span>?</h1>
+      <p class="hero-sub" data-i18n="hero.sub">Uma plataforma pessoal para organizar, acompanhar e explorar animes,
+        desenhos, filmes, mangás,
+        HQs e vídeos.</p>
+      <a href="#visao-geral" class="btn-primary" data-i18n="hero.cta">Explorar <i
+          class="fa-solid fa-chevron-down"></i></a>
+    </div>
+  </section>
+
+
+  <section class="section" id="visao-geral">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-compass"></i></span>
+        <h2 data-i18n="overview.title">Visão Geral</h2>
+      </div>
+      <div class="card-row">
+        <div class="info-card">
+          <i class="fa-solid fa-users info-card-icon"></i>
+          <h3 data-i18n="overview.card1.title">Para usuários autenticados</h3>
+          <p data-i18n="overview.card1.desc">Acompanhe progresso, acumule XP, personalize o perfil, mantenha histórico e
+            utilize ferramentas como a ZenkAI.</p>
+        </div>
+        <div class="info-card">
+          <i class="fa-solid fa-eye info-card-icon"></i>
+          <h3 data-i18n="overview.card2.title">Para visitantes</h3>
+          <p data-i18n="overview.card2.desc">Explore as vitrines e catálogos livremente. Para acessar reprodução,
+            leitores, progresso, perfil, comunidade e jogos, é necessário entrar.</p>
+        </div>
+        <div class="info-card">
+          <i class="fa-solid fa-shield-halved info-card-icon"></i>
+          <h3 data-i18n="overview.card3.title">Projeto Acadêmico</h3>
+          <p data-i18n="overview.card3.desc">O site Zenkai é um projeto público e pode ser acessado por qualquer pessoa.
+            Aprenda a cadastrar manualmente no site.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section section-alt" id="paginas">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-window-maximize"></i></span>
+        <h2 data-i18n="pages.title">Páginas Principais</h2>
+      </div>
+      <div class="table-wrap">
+        <table class="pages-table">
+          <thead>
+            <tr>
+              <th data-i18n="pages.col1">Página</th>
+              <th data-i18n="pages.col2">Finalidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>index.html</code></td>
+              <td data-i18n="pages.row1">Portal inicial, atalhos e apresentação da plataforma</td>
+            </tr>
+            <tr>
+              <td><code>login.html</code> / <code>registro.html</code></td>
+              <td data-i18n="pages.row2">Autenticação por e-mail, OTP e acesso à conta</td>
+            </tr>
+            <tr>
+              <td><code>perfil.html</code></td>
+              <td data-i18n="pages.row3">Dashboard de perfil, nível, XP, inventário, histórico e estatísticas</td>
+            </tr>
+            <tr>
+              <td><code>animes.html</code> / <code>desenhos.html</code></td>
+              <td data-i18n="pages.row4">Catálogos e detalhes de animes e desenhos</td>
+            </tr>
+            <tr>
+              <td><code>anime-episodios.html</code> / <code>episodios-desenhos.html</code></td>
+              <td data-i18n="pages.row5">Temporadas, episódios e acompanhamento de progresso</td>
+            </tr>
+            <tr>
+              <td><code>filmes.html</code></td>
+              <td data-i18n="pages.row6">Catálogo e player de filmes</td>
+            </tr>
+            <tr>
+              <td><code>youtube.html</code> / <code>youtube-videos.html</code></td>
+              <td data-i18n="pages.row7">Playlists, vídeos e progresso do YouTube</td>
+            </tr>
+            <tr>
+              <td><code>mangas.html</code></td>
+              <td data-i18n="pages.row8">Organizador e leitor de mangás por volume</td>
+            </tr>
+            <tr>
+              <td><code>hq.html</code></td>
+              <td data-i18n="pages.row9">Visualizador de HQs em PDF com anotações</td>
+            </tr>
+            <tr>
+              <td><code>loja.html</code></td>
+              <td data-i18n="pages.row10">SenseiMod Store e cosméticos</td>
+            </tr>
+            <tr>
+              <td><code>zenkai.html</code></td>
+              <td data-i18n="pages.row11">ZenkAI: chat, visão e comparador de personagens</td>
+            </tr>
+            <tr>
+              <td><code>painel-cadastros.html</code> + <code>cadastro-*.html</code></td>
+              <td data-i18n="pages.row12">Administração e cadastro de conteúdo</td>
+            </tr>
+            <tr>
+              <td><code>usuarios.html</code></td>
+              <td data-i18n="pages.row13">Comunidade, conexões e perfis de usuários</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="xp-ranks">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-star"></i></span>
+        <h2 data-i18n="xp.title">XP, Ranks & SenseiMod Store</h2>
+      </div>
+      <p class="section-desc" data-i18n="xp.desc">O XP é atribuído automaticamente às atividades concluídas. Na
+        SenseiMod Store, ele pode ser convertido em fichas para adquirir cosméticos.</p>
+
+      <div class="xp-grid">
+        <div class="xp-tables">
+          <h3 class="sub-title"><i class="fa-solid fa-bolt"></i> <span data-i18n="xp.tableTitle">XP por Atividade</span>
+          </h3>
+          <div class="table-wrap">
+            <table class="pages-table">
+              <thead>
+                <tr>
+                  <th data-i18n="xp.col1">Atividade</th>
+                  <th data-i18n="xp.col2">XP</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="xp.act1">Episódio de anime assistido</td>
+                  <td class="xp-val">+10 XP</td>
+                </tr>
+                <tr>
+                  <td data-i18n="xp.act2">Episódio de desenho assistido</td>
+                  <td class="xp-val">+10 XP</td>
+                </tr>
+                <tr>
+                  <td data-i18n="xp.act3">Volume de mangá lido</td>
+                  <td class="xp-val">+15 XP</td>
+                </tr>
+                <tr>
+                  <td data-i18n="xp.act4">Edição de HQ lida</td>
+                  <td class="xp-val">+15 XP</td>
+                </tr>
+                <tr>
+                  <td data-i18n="xp.act5">Filme assistido</td>
+                  <td class="xp-val">+50 XP</td>
+                </tr>
+                <tr>
+                  <td data-i18n="xp.act6">Vídeo do YouTube assistido</td>
+                  <td class="xp-val">+5 XP</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="xp-tables">
+          <h3 class="sub-title"><i class="fa-solid fa-coins"></i> <span data-i18n="xp.storeTitle">Fichas da Store</span>
+          </h3>
+          <div class="table-wrap">
+            <table class="pages-table">
+              <thead>
+                <tr>
+                  <th data-i18n="xp.scol1">Ficha</th>
+                  <th data-i18n="xp.scol2">Custo</th>
+                  <th data-i18n="xp.scol3">Requisito</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="store-icon gold-icon"><i class="fa-solid fa-medal"></i></span> <span
+                      data-i18n="xp.token1">Ouro</span></td>
+                  <td class="xp-val">100 XP</td>
+                  <td data-i18n="xp.req1">Rank Prata</td>
+                </tr>
+                <tr>
+                  <td><span class="store-icon diamond-icon"><i class="fa-solid fa-gem"></i></span> <span
+                      data-i18n="xp.token2">Diamante</span></td>
+                  <td class="xp-val">250 XP</td>
+                  <td data-i18n="xp.req2">Rank Mestre</td>
+                </tr>
+                <tr>
+                  <td><span class="store-icon emerald-icon"><i class="fa-solid fa-gem"></i></span> <span
+                      data-i18n="xp.token3">Esmeralda</span></td>
+                  <td class="xp-val">500 XP</td>
+                  <td data-i18n="xp.req3">Rank Guardião</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <h3 class="sub-title rank-title"><i class="fa-solid fa-trophy"></i> <span data-i18n="xp.rankTitle">Progressão
+              de Ranks</span></h3>
+          <div class="rank-flow">
+            <span class="rank-pill bronze" data-i18n="xp.rank1">Bronze</span>
+            <i class="fa-solid fa-arrow-right rank-arrow"></i>
+            <span class="rank-pill prata" data-i18n="xp.rank2">Prata</span>
+            <i class="fa-solid fa-arrow-right rank-arrow"></i>
+            <span class="rank-pill ouro" data-i18n="xp.rank3">Ouro</span>
+            <i class="fa-solid fa-arrow-right rank-arrow"></i>
+            <span class="rank-pill mestre" data-i18n="xp.rank4">Mestre</span>
+            <i class="fa-solid fa-arrow-right rank-arrow"></i>
+            <span class="rank-pill lenda" data-i18n="xp.rank5">Lenda</span>
+            <i class="fa-solid fa-arrow-right rank-arrow"></i>
+            <span class="rank-pill hokage" data-i18n="xp.rank6">Hokage</span>
+            <i class="fa-solid fa-arrow-right rank-arrow"></i>
+            <span class="rank-pill guardiao" data-i18n="xp.rank7">Guardião</span>
+            <i class="fa-solid fa-arrow-right rank-arrow"></i>
+            <span class="rank-pill imortal" data-i18n="xp.rank8">Imortal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section section-alt" id="como-cadastrar">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fa-solid fa-pen-to-square"></i></span>
+        <h2 data-i18n="guide.title">Guia de Cadastro</h2>
+      </div>
+      <p class="section-desc" data-i18n="guide.desc">Manual para administradores responsáveis pela publicação de
+        conteúdos no portal. Garante padrão visual, técnico e organizacional consistente.</p>
+
+
+      <h3 class="sub-title mt-lg"><i class="fa-solid fa-sitemap"></i> <span data-i18n="guide.structureTitle">Estrutura
+          de Conteúdo</span></h3>
+      <div class="content-types-grid">
+        <div class="content-type-card">
+          <span class="ct-icon"><i class="fa-solid fa-paint-brush"></i></span>
+          <strong data-i18n="guide.ct1.name">Desenhos</strong>
+          <span data-i18n="guide.ct1.desc">Série por temporada</span>
+        </div>
+        <div class="content-type-card">
+          <span class="ct-icon"><i class="fa-solid fa-dragon"></i></span>
+          <strong data-i18n="guide.ct2.name">Animes</strong>
+          <span data-i18n="guide.ct2.desc">Série por temporada</span>
+        </div>
+        <div class="content-type-card">
+          <span class="ct-icon"><i class="fa-solid fa-film"></i></span>
+          <strong data-i18n="guide.ct3.name">Filmes</strong>
+          <span data-i18n="guide.ct3.desc">Conteúdo individual</span>
+        </div>
+        <div class="content-type-card">
+          <span class="ct-icon"><i class="fa-solid fa-book"></i></span>
+          <strong data-i18n="guide.ct4.name">Mangás</strong>
+          <span data-i18n="guide.ct4.desc">Múltiplos volumes</span>
+        </div>
+        <div class="content-type-card">
+          <span class="ct-icon"><i class="fa-solid fa-comment-dots"></i></span>
+          <strong data-i18n="guide.ct5.name">HQs</strong>
+          <span data-i18n="guide.ct5.desc">Múltiplas edições</span>
+        </div>
+        <div class="content-type-card">
+          <span class="ct-icon"><i class="fa-brands fa-youtube"></i></span>
+          <strong data-i18n="guide.ct6.name">YouTube</strong>
+          <span data-i18n="guide.ct6.desc">Vídeo via iframe</span>
+        </div>
+      </div>
+
+
+      <h3 class="sub-title mt-lg"><i class="fa-solid fa-circle-check"></i> <span
+          data-i18n="guide.standardsTitle">Padrões Gerais</span></h3>
+      <ul class="check-list">
+        <li><i class="fa-solid fa-check"></i> <span data-i18n="guide.std1">Títulos padronizados e sem abreviações
+            desnecessárias</span></li>
+        <li><i class="fa-solid fa-check"></i> <span data-i18n="guide.std2">Ortografia, acentuação e capitalização
+            corretas</span></li>
+        <li><i class="fa-solid fa-check"></i> <span data-i18n="guide.std3">Categoria correta do conteúdo</span></li>
+        <li><i class="fa-solid fa-check"></i> <span data-i18n="guide.std4">Funcionamento de links, iframes e
+            arquivos</span></li>
+        <li><i class="fa-solid fa-check"></i> <span data-i18n="guide.std5">Consistência entre nome, capa e
+            navegação</span></li>
+        <li><i class="fa-solid fa-check"></i> <span data-i18n="guide.std6">Ausência de itens duplicados</span></li>
+      </ul>
+
+
+      <h3 class="sub-title mt-lg"><i class="fa-solid fa-play-circle"></i> <span data-i18n="guide.videoTitle">Tutorial:
+          Vídeos & YouTube</span></h3>
+      <p class="section-desc small" data-i18n="guide.videoDesc">Aplica-se a Desenhos, Animes, Filmes e YouTube. O
+        processo é o mesmo: obter o código <code>iframe</code> e inseri-lo no painel.</p>
+
+      <div class="steps-list">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <strong data-i18n="guide.step1.title">Acesse o RedeCanais</strong>
+            <p data-i18n="guide.step1.desc">Entre em <code>redecanais.cafe</code>. Se o domínio mudar, substitua apenas
+              o final <code>.cafe</code> pelo novo.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <strong data-i18n="guide.step2.title">Pesquise o título desejado</strong>
+            <p data-i18n="guide.step2.desc">Use a busca para localizar o conteúdo.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <strong data-i18n="guide.step3.title">Abra o item correto</strong>
+            <p data-i18n="guide.step3.desc">Para desenhos e animes, selecione o episódio exato. Para filmes, abra a
+              página do filme. O site pode abrir pop-ups — basta fechá-los e voltar.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <strong data-i18n="guide.step4.title">Localize a opção de incorporação</strong>
+            <p data-i18n="guide.step4.desc">Na área do player, procure a opção de código <code>iframe</code> ou
+              <code>embed</code>.
+            </p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <strong data-i18n="guide.step5.title">Copie e ajuste o código</strong>
+            <p data-i18n="guide.step5.desc">Copie o bloco <code>&lt;iframe&gt;</code> completo. Por padrão, nosso site já atualiza para:
+              <code>height="450"</code> e <code>width="800"</code>.
+            </p>
+            <div class="code-block">
+              <button class="copy-btn" onclick="copyCode(this)" title="Copiar"><i class="fa-solid fa-copy"></i></button>
+              <pre><code>&lt;iframe
+  src="https://embed.exemplo.com/..."
+  height="450"
+  width="800"
+  frameborder="0"
+  allowfullscreen&gt;
+&lt;/iframe&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">6</div>
+          <div class="step-body">
+            <strong data-i18n="guide.step6.title">Cole no painel administrativo</strong>
+            <p data-i18n="guide.step6.desc">Insira o iframe no campo apropriado do painel e salve.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <h3 class="sub-title mt-lg"><i class="fa-solid fa-images"></i> <span data-i18n="guide.demoVideo">Demonstração —
+          Vídeos</span></h3>
+      <div class="screenshots-grid">
+        <div class="screenshot-card">
+          <img src="./assets/prints/screenshot1.png" alt="Screen 1 - Acesso ao RedeCanais" loading="lazy"
+            onclick="openLightbox(this)" />
+          <p data-i18n="guide.ss1">1 — Acessar o RedeCanais</p>
+        </div>
+        <div class="screenshot-card">
+          <img src="./assets/prints/screenshot2.png" alt="Screen 2 - Pesquisa do conteúdo" loading="lazy"
+            onclick="openLightbox(this)" />
+          <p data-i18n="guide.ss2">2 — Pesquisar o conteúdo</p>
+        </div>
+        <div class="screenshot-card">
+          <img src="./assets/prints/screenshot3.png" alt="Screen 3 - Página do episódio" loading="lazy"
+            onclick="openLightbox(this)" />
+          <p data-i18n="guide.ss3">3 — Entrar no episódio ou filme</p>
+        </div>
+        <div class="screenshot-card">
+          <img src="./assets/prints/screenshot4.png" alt="Screen 4 - Código iframe" loading="lazy"
+            onclick="openLightbox(this)" />
+          <p data-i18n="guide.ss4">4 — Pegar o código iframe</p>
+        </div>
+        <div class="screenshot-card">
+          <img src="./assets/prints/screenshot5.png" alt="Screen 5 - Ajuste do iframe" loading="lazy"
+            onclick="openLightbox(this)" />
+          <p data-i18n="guide.ss5">5 — Ajustar o iframe</p>
+        </div>
+        <div class="screenshot-card">
+          <img src="./assets/prints/screenshot6.png" alt="Screen 6 - Cadastro implementado" loading="lazy"
+            onclick="openLightbox(this)" />
+          <p data-i18n="guide.ss6">6 — Cadastro implementado</p>
+        </div>
+      </div>
+
+
+      <h3 class="sub-title mt-lg"><i class="fa-solid fa-book-open"></i> <span data-i18n="guide.mangaTitle">Tutorial:
+          Mangás & HQs (PDF)</span></h3>
+      <p class="section-desc small" data-i18n="guide.mangaDesc">Duas opções disponíveis conforme o tamanho do arquivo.
+      </p>
+
+      <div class="option-cards">
+        <div class="option-card">
+          <div class="option-header">
+            <span class="option-letter">A</span>
+            <h4 data-i18n="guide.optA.title">Upload Direto</h4>
+            <span class="option-tag" data-i18n="guide.optA.tag">Recomendado até 50 MB</span>
+          </div>
+          <ol class="option-steps">
+            <li data-i18n="guide.optA.s1">Acesse o painel administrativo.</li>
+            <li data-i18n="guide.optA.s2">Vá até a seção de cadastro de mangás ou HQs.</li>
+            <li data-i18n="guide.optA.s3">Preencha os dados principais.</li>
+            <li data-i18n="guide.optA.s4">Faça o upload do PDF no campo indicado.</li>
+            <li data-i18n="guide.optA.s5">Salve e revise a publicação.</li>
+          </ol>
+          <div class="option-pros">
+            <span><i class="fa-solid fa-plus"></i> <span data-i18n="guide.optA.pro1">Processo mais rápido</span></span>
+            <span><i class="fa-solid fa-plus"></i> <span data-i18n="guide.optA.pro2">Gerenciamento
+                centralizado</span></span>
+            <span><i class="fa-solid fa-plus"></i> <span data-i18n="guide.optA.pro3">Menor dependência
+                externa</span></span>
+          </div>
+        </div>
+
+        <div class="option-card">
+          <div class="option-header">
+            <span class="option-letter option-letter-b">B</span>
+            <h4 data-i18n="guide.optB.title">Link do Google Drive</h4>
+            <span class="option-tag" data-i18n="guide.optB.tag">Para arquivos grandes</span>
+          </div>
+          <ol class="option-steps">
+            <li data-i18n="guide.optB.s1">Acesse o Google Drive ou outro serviço com o PDF.</li>
+            <li data-i18n="guide.optB.s2">Abra a caixa de compartilhamento ou visualização.</li>
+            <li data-i18n="guide.optB.s3">Copie o link do PDF do volume desejado.</li>
+            <li data-i18n="guide.optB.s4">Insira o link no campo correspondente do painel.</li>
+            <li data-i18n="guide.optB.s5">Salve e teste o acesso.</li>
+          </ol>
+          <div class="option-pros">
+            <span><i class="fa-solid fa-plus"></i> <span data-i18n="guide.optB.pro1">Suporte a arquivos
+                grandes</span></span>
+            <span><i class="fa-solid fa-plus"></i> <span data-i18n="guide.optB.pro2">Maior flexibilidade</span></span>
+            <span><i class="fa-solid fa-plus"></i> <span data-i18n="guide.optB.pro3">Atualização externa do
+                arquivo</span></span>
+          </div>
+          <div class="option-warn">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span data-i18n="guide.optB.warn">Valide se o link está acessível sem login. Confirme se corresponde ao
+              volume correto.</span>
+          </div>
+        </div>
+      </div>
+
+
+      <h3 class="sub-title mt-lg"><i class="fa-solid fa-images"></i> <span data-i18n="guide.demoManga">Demonstração —
+          Mangás & HQs</span></h3>
+      <div class="screenshots-grid">
+        <div class="screenshot-card">
+          <img src="./assets/prints/screenshot7.png" alt="Screen 7 - Link do PDF" loading="lazy"
+            onclick="openLightbox(this)" />
+          <p data-i18n="guide.ss7">7 — Abrir o link do PDF</p>
+        </div>
+        <div class="screenshot-card">
+          <img src="./assets/prints/screenshot8.png" alt="Screen 8 - Seleção do volume" loading="lazy"
+            onclick="openLightbox(this)" />
+          <p data-i18n="guide.ss8">8 — Selecionar o volume</p>
+        </div>
+        <div class="screenshot-card">
+          <img src="./assets/prints/screenshot9.png" alt="Screen 9 - Link do volume" loading="lazy"
+            onclick="openLightbox(this)" />
+          <p data-i18n="guide.ss9">9 — Copiar o link do volume</p>
+        </div>
+        <div class="screenshot-card">
+          <img src="./assets/prints/screenshot10.png" alt="Screen 10 - Cadastro do volume" loading="lazy"
+            onclick="openLightbox(this)" />
+          <p data-i18n="guide.ss10">10 — Cadastro do volume</p>
+        </div>
+        <div class="screenshot-card">
+          <img src="./assets/prints/screenshot11.png" alt="Screen 11 - PDF integrado" loading="lazy"
+            onclick="openLightbox(this)" />
+          <p data-i18n="guide.ss11">11 — Volume aberto com PDF</p>
+        </div>
+      </div>
+
+
+      <h3 class="sub-title mt-lg"><i class="fa-solid fa-clipboard-check"></i> <span
+          data-i18n="guide.checklistTitle">Checklist de Publicação</span></h3>
+      <div class="checklist-wrap">
+        <label class="checklist-item" id="chk-1"><input type="checkbox" /> <span data-i18n="guide.chk1">Conteúdo
+            cadastrado na categoria correta.</span></label>
+        <label class="checklist-item" id="chk-2"><input type="checkbox" /> <span data-i18n="guide.chk2">Título
+            padronizado e revisado.</span></label>
+        <label class="checklist-item" id="chk-3"><input type="checkbox" /> <span data-i18n="guide.chk3">Capa ou mídia
+            visual correta.</span></label>
+        <label class="checklist-item" id="chk-4"><input type="checkbox" /> <span data-i18n="guide.chk4">Iframe ou
+            arquivo inserido corretamente.</span></label>
+        <label class="checklist-item" id="chk-5"><input type="checkbox" /> <span data-i18n="guide.chk5">Conteúdo abre
+            sem erros.</span></label>
+        <label class="checklist-item" id="chk-6"><input type="checkbox" /> <span data-i18n="guide.chk6">Episódio, filme
+            ou volume corresponde ao item publicado.</span></label>
+        <label class="checklist-item" id="chk-7"><input type="checkbox" /> <span data-i18n="guide.chk7">Formatação segue
+            o padrão definido neste guia.</span></label>
+        <label class="checklist-item" id="chk-8"><input type="checkbox" /> <span data-i18n="guide.chk8">Não existe
+            duplicidade do mesmo conteúdo no sistema.</span></label>
+        <div class="checklist-progress">
+          <div class="progress-bar" id="progress-bar"></div>
+          <span id="progress-label">0 / 8</span>
+        </div>
+      </div>
+
+
+      <div class="best-practices-row">
+        <div class="bp-card">
+          <h3 class="sub-title"><i class="fa-solid fa-lightbulb"></i> <span data-i18n="guide.bpTitle">Boas
+              Práticas</span></h3>
+          <ul class="bp-list">
+            <li data-i18n="guide.bp1">Revise o conteúdo antes da publicação</li>
+            <li data-i18n="guide.bp2">Evite publicar materiais incompletos</li>
+            <li data-i18n="guide.bp3">Mantenha coerência entre título, descrição e mídia</li>
+            <li data-i18n="guide.bp4">Use sempre a fonte oficial definida pela operação</li>
+            <li data-i18n="guide.bp5">Documente exceções internamente</li>
+            <li data-i18n="guide.bp6">Priorize consistência visual e de navegação</li>
+          </ul>
+        </div>
+        <div class="bp-card bp-warn-card">
+          <h3 class="sub-title"><i class="fa-solid fa-circle-xmark"></i> <span data-i18n="guide.errTitle">Erros Comuns a
+              Evitar</span></h3>
+          <ul class="bp-list warn-list">
+            <li data-i18n="guide.err1">Cadastrar episódio incorreto</li>
+            <li data-i18n="guide.err2">Colar iframe incompleto</li>
+            <li data-i18n="guide.err3">Esquecer de ajustar <code>width</code> e <code>height</code></li>
+            <li data-i18n="guide.err4">Publicar links quebrados</li>
+            <li data-i18n="guide.err5">Inserir mangá ou HQ com permissão privada no Drive</li>
+            <li data-i18n="guide.err6">Criar entradas duplicadas por falta de conferência</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <img src="./assets/icon.png" alt="Zenkai" class="footer-logo" />
+    <p>© ViselBrx & DaviMoraes07 — Zenkai</p>
+  </footer>
+
+
+  <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
